@@ -41,7 +41,7 @@ else
   }
 fi
 
-function update() {
+function upd() {
   $HOME/.config/scripts/pacman-update.sh
 }
 
