@@ -31,6 +31,14 @@ alias rm="sudo rm"
 alias systemctl="sudo systemctl"
 alias sed="sudo sed"
 
+# octopus
+ alias dot="cd $HOME/.dotfiles && clear && ls -1"
+ alias install="sudo pacman -S $1"
+ alias proc="pacman -Ss $1"
+ alias drop="sudo pacman -Rns $1"
+ alias info="pacman -Qi $1"
+ alias qs="pacman -Qs $1"
+
 source $HOME/.config/functions.sh
 
 function fetch() {
