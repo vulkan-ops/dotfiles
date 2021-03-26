@@ -12,6 +12,7 @@ readonly PACKAGES=(
   # apps
   alacritty atom
   cronie
+  firefox firefox-i18n-pt-br
   filezilla
   git gpicview
   htop
