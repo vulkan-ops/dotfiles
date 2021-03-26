@@ -18,7 +18,7 @@
 ## Usage:
 
 ```
-$ git clone https://github.com/mamutal91/dotfiles ~/.dotfiles
+$ git clone https://github.com/vulkan-ops/dotfiles ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./setup/setup.sh
 $ ./install.sh

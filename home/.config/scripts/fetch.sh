@@ -130,7 +130,7 @@ blockColors ()
 # Infos
 # Coleta das informaçoes dos discos
 disks /dev/sda2
-user="github.com/mamutal91"
+user="github.com/vulkan-ops"
 read hostname kernel <<< ${(s: :)$(uname -a)[2,3]}
 uptime=${(s: :)$(uptime)[3]//,/}
 free -h |sed -n 2'p'|awk {'print $3" "$7" "$2'} |read memused memfree memtotal
