@@ -17,6 +17,7 @@ function translate() {
   cat $typing
 }
 
+if [ $HOST = "vitor" ]; then
   function cm() {
     translate
     git add . && git commit --message $msg --signoff --author "vulkan-ops <vulkanops@gmail.com>" && git push -f
@@ -38,6 +39,7 @@ else
   function amend() {
     git add . && git commit --amend
   }
+fi
 
 function update() {
   $HOME/.config/scripts/pacman-update.sh
