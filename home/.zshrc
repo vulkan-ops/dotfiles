@@ -31,41 +31,9 @@ alias rm="sudo rm"
 alias systemctl="sudo systemctl"
 alias sed="sudo sed"
 
-# paths
-alias aospk="cd $HOME/AOSPK"
-alias x="cd /mnt/roms/jobs/Kraken"
-
 source $HOME/.config/functions.sh
-source $HOME/.config/kraken/functions.sh
 
 function fetch() {
   ./.dotfiles/home/.config/scripts/fetch.sh gnu
 }
 
-function dot() {
-  pwd=$(pwd)
-  cd $HOME
-  rm -rf .dotfiles && git clone ssh://git@github.com/mamutal91/dotfiles .dotfiles
-  ./.dotfiles/install.sh
-  source .zshrc
-  cd $pwd
-}
-
-function infra() {
-  pwd=$(pwd)
-  cd $HOME
-  echo "infra cloned."
-  sudo rm -rf /mnt/roms/infra
-  git clone ssh://git@github.com/mamutal91/infra && sudo mv infra /mnt/roms
-  cd $pwd
-}
-
-
-function builders() {
-  pwd=$(pwd)
-  cd $HOME
-  echo "buildersbr cloned."
-  sudo rm -rf /mnt/roms/buildersbr
-  git clone ssh://git@github.com/BuildersBR/buildersbr && sudo mv buildersbr /mnt/roms
-  cd $pwd
-}

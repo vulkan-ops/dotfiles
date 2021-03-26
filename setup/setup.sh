@@ -2,8 +2,8 @@
 
 if [[ $USER = "mamutal91" ]]; then
   pwd=$(pwd) && cd $HOME
-  git config --global user.email "mamutal91@gmail.com"
-  git config --global user.name "Alexandre Rangel"
+  git config --global user.email "vulkanops@gmail.com"
+  git config --global user.name "vulkan-ops"
   git config --global http.postBuffer 524288000
   rm -rf $HOME/.zsh_history && wget https://raw.githubusercontent.com/mamutal91/zsh-history/master/.zsh_history
   mkdir -p $HOME/{Images,Videos} &>/dev/null

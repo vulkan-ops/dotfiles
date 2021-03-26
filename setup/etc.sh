@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # modprobe.d
-if [[ $HOST = "odin" ]]; then
+if [[ $HOST = "vitor" ]]; then
   echo "options ath10k_pci fwlps=0" | sudo tee -a /etc/modprobe.d/ath10k_pci.conf > /dev/null
 fi
 
