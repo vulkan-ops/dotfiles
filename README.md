@@ -1,6 +1,6 @@
 # ~/.dotfiles
 
-![screenshot](https://raw.githubusercontent.com/mamutal91/dotfiles/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/vulkan-ops/dotfiles/master/screenshot.png)
 
 ## Some of the worthy tools that I use, develop or help maintain:
 
