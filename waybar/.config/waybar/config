@@ -62,8 +62,8 @@
     "interval": 30,
     "format": "{icon} {percent}%",
     "format-icons": [""],
-    "on-scroll-down": "echo $((`cat /sys/class/backlight/amdgpu_bl0/brightness` - 5)) | sudo tee /sys/class/backlight/amdgpu_bl0/brightness",
-    "on-scroll-up": "echo $((`cat /sys/class/backlight/amdgpu_bl0/brightness` + 5)) | sudo tee /sys/class/backlight/amdgpu_bl0/brightness"
+    "on-scroll-down": "echo $((`cat /sys/class/backlight/intel_backlight/brightness` - 5)) | sudo tee /sys/class/backlight/intel_backlight/brightness",
+    "on-scroll-up": "echo $((`cat /sys/class/backlight/intel_backlight/brightness` + 5)) | sudo tee /sys/class/backlight/intel_backlight/brightness"
   },
   "battery": {
     "bat": "BAT1",
