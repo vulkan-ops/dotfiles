@@ -6,6 +6,7 @@
   // Bar
   "modules-left": [
     "custom/github",
+    "custom/whatsapp",
     "custom/gerrit",
     "custom/youtube",
     "custom/mail",
@@ -112,6 +113,11 @@
   "custom/github": {
     "format": "",
     "on-click": "xdg-open https://github.com",
+    "tooltip": false
+  },
+"custom/whatsapp": {
+    "format": "",
+    "on-click": "xdg-open https://web.whatsapp.com/",
     "tooltip": false
   },
   "custom/gerrit": {

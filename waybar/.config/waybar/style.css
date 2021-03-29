@@ -54,7 +54,7 @@ window#waybar.empty {
   font-weight: 600;
 }
 /* BROWSER BOOKMARKS */
-#custom-github, #custom-gerrit, #custom-keep, #custom-bluetooth {
+#custom-github, #custom-whatsapp, #custom-gerrit, #custom-keep, #custom-bluetooth {
 	background-color: #2e3440;
 	padding-left: 6px;
 	padding-right: 6px;
@@ -66,6 +66,9 @@ window#waybar.empty {
 }
 #custom-gerrit {
 	color: #2bd96c;
+}
+#custom-whatsapp {
+	color: #25d366;
 }
 #custom-keep {
 	color: #ffd04e;
