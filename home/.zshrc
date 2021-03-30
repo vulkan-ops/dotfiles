@@ -46,12 +46,8 @@ function fetch() {
   ./.dotfiles/home/.config/scripts/fetch.sh gnu
 }
 
-function vm1 () {
+function vm () {
 ssh vitor@177.180.12.157
-}
-
-function vm2 () {
-ssh vitor@147.75.63.219
 }
 
 function job () {

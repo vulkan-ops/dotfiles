@@ -45,7 +45,7 @@ function upd() {
   $HOME/.config/scripts/pacman-update.sh
 }
 
-function sshconfig() {
+function sshgen() {
   ssh-keygen -t ed25519 -C "vulkanops@gmail.com"
   eval "$(ssh-agent -s)" && ssh-add -l
   cat $HOME/.ssh/id_ed25519.pub | wl-copy
