@@ -25,6 +25,8 @@
     "network",
     "battery",
     "clock",
+    "custom/reboot",
+    "custom/poweroff",
   ],
   // Modules
   "sway/workspaces": {
@@ -45,6 +47,16 @@
     "format": "{:%H:%M}",
     "format-alt": "{:%d-%m-%Y}",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><big>{calendar}</big></tt>",
+  },
+  "custom/reboot": {
+    "format": "",
+    "on-click": "reboot",
+    "tooltip": false
+  },
+  "custom/poweroff": {
+    "format": "",
+    "on-click": "poweroff",
+    "tooltip": false
   },
   "cpu": {
     "interval": 30,
