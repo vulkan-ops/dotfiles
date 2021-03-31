@@ -42,32 +42,3 @@ alias sed="sudo sed"
 
 source $HOME/.config/functions.sh
 
-function fetch() {
-  ./.dotfiles/home/.config/scripts/fetch.sh gnu
-}
-
-function vm () {
-ssh vitor@177.180.12.157
-}
-
-function job () {
-mkdir GitHub
-cd GitHub
-git clone https://github.com/vulkan-ops/arch arch
-git clone https://github.com/AOSPK-Devices/device_motorola_ocean ocean-dt
-git clone https://github.com/AOSPK-Devices/device_motorola_sdm632-common common-tree
-git clone https://gitlab.com/AOSPK-Devices/vendor_motorola_ocean vendor-ocean
-git clone https://gitlab.com/AOSPK-Devices/vendor_motorola_sdm632-common vendor-common
-git clone https://github.com/AOSPK-Devices/kernel_motorola_sdm632 kernel
-}
-
-function v () {
-export CCACHE_EXEC=$(which ccache)
-export USE_CCACHE=1
-export CCACHE_DIR=$HOME/.ccache
-ccache -M 50G
-. build/envsetup.sh
-lunch aosp_${1}-userdebug
-make bacon -j$(nproc --all) | tee ${1}.log
-}
-
