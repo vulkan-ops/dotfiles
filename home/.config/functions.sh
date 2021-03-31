@@ -10,6 +10,14 @@ function p() {
   git cherry-pick ${1}
 }
 
+function cc() {
+  git add . && git cherry-pick --continue
+}
+
+function a() {
+  git cherry-pick --abort
+}
+
 function translate() {
   typing=$(mktemp)
   rm -rf $typing && nano $typing
