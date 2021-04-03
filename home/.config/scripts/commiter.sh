@@ -3,7 +3,7 @@
 github=/home/vitor/GitHub
 
 repo0="dotfiles"
-repo1="arch"
+repo1="myarch"
 repo2="ocean-dt"
 repo3="common-tree"
 repo4="vendor-ocean"
@@ -16,7 +16,7 @@ case $chosen in
 $repo0)
 alacritty -t newcommit --working-directory $HOME/.dotfiles;;
 $repo1)
-alacritty -t newcommit --working-directory $github/arch;;
+alacritty -t newcommit --working-directory $github/myarch;;
 $repo2)
 alacritty -t newcommit --working-directory $github/ocean-dt;;
 $repo3)
