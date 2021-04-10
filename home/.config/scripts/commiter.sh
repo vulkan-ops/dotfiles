@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-github=/home/vitor/GitHub
+github=/home/vitor/Downloads/github
 
 repo0="dotfiles"
 repo1="myarch"
