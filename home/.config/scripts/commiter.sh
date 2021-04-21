@@ -9,9 +9,11 @@ repo3="common-tree"
 repo4="vendor-ocean"
 repo5="vendor-common"
 repo6="kernel"
-repos="$repo0\n$repo1\n$repo2\n$repo3\n$repo4\n$repo5\n$repo6"
+repo7="river-dt"
+repo8="vendor-river"
+repos="$repo0\n$repo1\n$repo2\n$repo3\n$repo4\n$repo5\n$repo6\n$repo7\n$repo8"
 
-chosen="$(echo -e "$repos" | wofi --lines 11 --dmenu -p "  Commiter")"
+chosen="$(echo -e "$repos" | wofi --lines 12 --dmenu -p "  Commiter")"
 case $chosen in
 $repo0)
 alacritty -t newcommit --working-directory $HOME/.dotfiles;;
@@ -27,6 +29,10 @@ $repo5)
 alacritty -t newcommit --working-directory $github/vendor-common;;
 $repo6)
 alacritty -t newcommit --working-directory $github/kernel;;
+$repo7)
+alacritty -t newcommit --working-directory $github/river-dt;;
+$repo8)
+alacritty -t newcommit --working-directory $github/vendor-river;;
 
 esac
 exit 0;
