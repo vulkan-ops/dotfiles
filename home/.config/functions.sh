@@ -81,6 +81,7 @@ cd Downloads
 mkdir github
 cd github
 git clone https://github.com/vulkan-ops/myarch myarch
+git clone https://github.com/vulkan-ops/official_devices official_devices
 git clone https://github.com/AOSPK-Devices/device_motorola_ocean ocean-dt
 git clone https://github.com/AOSPK-Devices/device_motorola_river river-dt
 git clone https://github.com/AOSPK-Devices/device_motorola_sdm632-common common-tree
