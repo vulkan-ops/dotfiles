@@ -18,7 +18,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.config/functions.sh
 
-export BROWSER="/usr/bin/firefox"
+export BROWSER="/usr/bin/google-chrome-beta"
 export EDITOR="nano"
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
 export TERM="xterm-256color"
