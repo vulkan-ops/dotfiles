@@ -4,7 +4,7 @@ env:
   TERM: alacritty
 
 import:
-  - /home/mamutal91/.config/alacritty/colors.yml
+  - /home/vitor/.config/alacritty/colors.yml
 
 scrolling:
   history: 10000
@@ -17,18 +17,17 @@ window:
 
 font:
   normal:
-    family: xos4 Terminus
+    family: Terminus
     style: Regular
   bold:
-    family: xos4 Terminus
+    family: Terminus
     style: Bold
   italic:
-    family: xos4 Terminus
+    family: Terminus
     style: Italic
   bold_italic:
-    family: xos4 Terminus
+    family: Terminus
     style: Bold Italic
-  size: 10.0
 
 background_opacity: 0.7
 
