@@ -39,7 +39,7 @@ if [ $HOST = "vitor" ]; then
 else
   function cm() {
     translate
-    git add . && git commit --message $msg --signoff --author "vulkan-ops <vulkanops@gmail.com>"
+    git add . && git commit --message $msg --signoff --author "vulkan-ops <vulkanops@gmail.com>" && git push -f
   }
   function c() {
     git add . && git commit --author "${1}"
