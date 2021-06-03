@@ -83,10 +83,12 @@ cd github
 git clone https://github.com/vulkan-ops/myarch myarch
 git clone https://github.com/vulkan-ops/official_devices official_devices
 git clone https://github.com/AOSPK-Devices/device_motorola_ocean ocean-dt
-git clone https://github.com/AOSPK-Devices/device_motorola_river river-dt
-git clone https://github.com/AOSPK-Devices/device_motorola_sdm632-common common-tree
-git clone https://github.com/AOSPK-Devices/vendor_motorola_ocean vendor-ocean
-git clone https://github.com/AOSPK-Devices/vendor_motorola_river vendor-river
+git clone https://github.com/vulkan-ops/device_motorola_channel	channel-dt
+git clone https://github.com/vulkan-ops/device_motorola_river	river-dt
+git clone https://github.com/AOSPK-Devices/device_motorola_sdm632-common  common-tree
+git clone https://github.com/AOSPK-Devices/vendor_motorola_ocean  vendor-ocean
+git clone https://github.com/vulkan-ops/vendor_motorola_river	vendor-river
+git clone https://github.com/vulkan-ops/vendor_motorola_channel	vendor-channel
 git clone https://github.com/AOSPK-Devices/vendor_motorola_sdm632-common vendor-common
 git clone https://github.com/AOSPK-Devices/kernel_motorola_sdm632 kernel
 }
