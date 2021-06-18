@@ -1,0 +1,108 @@
+export ZSH="/mnt/hd3/vitor/.oh-my-zsh"
+export EDITOR="nano"
+export OUT_DIR=/mnt/hd3/vitor/out
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git
+sudo
+zsh-autosuggestions
+zsh-syntax-highlighting)
+
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+ mkdir $ZSH_CACHE_DIR
+fi
+
+source $ZSH/oh-my-zsh.sh
+
+alias chmod="sudo chmod"
+alias apt="sudo apt"
+alias pkill="sudo pkill"
+alias systemctl="sudo systemctl"
+alias sed="sudo sed"
+
+function sshgen() {
+  ssh-keygen -t ed25519 -C "vulkanops@gmail.com"
+  eval "$(ssh-agent -s)" && ssh-add -l
+  cat $HOME/.ssh/id_ed25519.pub | wl-copy
+}
+
+function job () {
+git clone https://github.com/vulkan-ops/device_motorola_channel  device/motorola/channel
+git clone https://github.com/vulkan-ops/device_motorola_ocean    device/motorola/ocean
+git clone https://github.com/vulkan-ops/device_motorola_river    device/motorola/river
+git clone https://github.com/vulkan-ops/device_motorola_sdm632-common  device/motorola/sdm632-common
+git clone https://github.com/vulkan-ops/vendor_motorola_ocean  vendor/motorola/ocean
+git clone https://github.com/vulkan-ops/vendor_motorola_channel  vendor/motorola/channel
+git clone https://github.com/vulkan-ops/vendor_motorola_river  vendor/motorola/river
+git clone https://github.com/vulkan-ops/vendor_motorola_sdm632-common  vendor/motorola/sdm632-common
+git clone https://github.com/vulkan-ops/kernel_motorola_sdm632  kernel/motorola/sdm632
+}
+
+function 404() {
+rm -rf hardware/qcom/bootctrl
+rm -rf vendor/qcom/opensource/commonsys-intf/display
+git clone https://github.com/LineageOS/android_external_bson external/bson
+git clone https://github.com/vulkan-ops/hardware_qcom_media hardware/qcom/media
+git clone https://github.com/vulkan-ops/hardware_qcom_display hardware/qcom/display
+git clone https://github.com/LineageOS/android_vendor_qcom_opensource_display-commonsys-intf vendor/qcom/opensource/commonsys-intf/display
+git clone https://github.com/vulkan-ops/vendor_qcom_opensource_audio-hal_primary-hal vendor/qcom/opensource/audio-hal/primary-hal
+git clone https://github.com/LineageOS/android_packages_resources_devicesettings packages/resources/devicesettings
+git clone https://github.com/LineageOS/android_hardware_qcom_bootctrl hardware/qcom/bootctrl
+git clone https://github.com/LineageOS/android_hardware_motorola hardware/motorola
+git clone https://github.com/vulkan-ops/device_qcom_sepolicy-legacy-um device/qcom/sepolicy-legacy-um
+}
+
+function dt () {
+git clone https://github.com/vulkan-ops/device_motorola_ocean -b p404  device/motorola/ocean
+git clone https://github.com/vulkan-ops/device_motorola_sdm632-common -b p404   device/motorola/sdm632-common
+git clone https://github.com/vulkan-ops/vendor_motorola_ocean  vendor/motorola/ocean
+git clone https://github.com/vulkan-ops/vendor_motorola_sdm632-common    vendor/motorola/sdm632-common
+git clone https://github.com/vulkan-ops/kernel_motorola_sdm632  kernel/motorola/sdm632
+}
+
+function f() {
+  git fetch https://github.com/${1} ${2}
+}
+
+function p() {
+  git cherry-pick ${1}
+}
+
+function cc() {
+  git add . && git cherry-pick --continue
+}
+
+function a() {
+  git cherry-pick --abort
+}
+
+  function c() {
+    git add . && git commit --author "${1}" && git push -f
+  }
+  function amend() {
+    git add . && git commit --signoff --amend && git push -f
+  }
+
+   function c() {
+    git add . && git commit --author "${1}"
+  }
+  function amend() {
+    git add . && git commit --amend
+  }
+
+function b () {
+. build/envsetup.sh
+make installclean
+lunch p404_ocean-userdebug
+export TEMPORARY_DISABLE_PATH_RESTRICTIONS=true
+export SKIP_ABI_CHECKS=true
+make bacon -j$(nproc --all) | tee ocean.log
+}
+
+function v () {
+. build/envsetup.sh
+lunch aosp_${1}-userdebug
+make bacon -j$(nproc --all) | tee ${1}.log
+}
