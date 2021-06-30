@@ -73,7 +73,7 @@ function fetch() {
 }
 
 function vm () {
-ssh vitor@179.211.213.25
+ssh vitor@177.180.13.124
 }
 
 function job () {
