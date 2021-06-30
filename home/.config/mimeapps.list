@@ -56,3 +56,5 @@ x-scheme-handler/tg=userapp-Telegram Desktop-0MNHW0.desktop;userapp-Telegram Des
 application/pdf=wps-office-pdf.desktop;
 text/x-log=org.gnome.gedit.desktop;
 application/octet-stream=org.gnome.gedit.desktop;
+application/x-shellscript=org.gnome.gedit.desktop;
+text/plain=org.gnome.gedit.desktop;
