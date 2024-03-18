@@ -5,7 +5,40 @@ source $HOME/.colors &>/dev/null
 aetc() {
 	#sudo cp /home/vulkan/.dotfiles/home/capivara/etc/hosts /etc/hosts
 	#sudo cp /home/vulkan/.dotfiles/home/capivara/etc/ntp.conf /etc/ntp.conf
-	sudo ntpd -q -g  && sudo hwclock --systohc
+	#sudo ntpd -q -g  && sudo hwclock --systohc
+ 	sudo fastboot oem fb_mode_set
+ 	sudo fastboot flash partition gpt.bin
+ 	sudo fastboot flash bootloader bootloader.img
+ 	sudo fastboot flash vbmeta vbmeta.img
+ 	sudo fastboot flash vbmeta_system vbmeta_system.img
+ 	sudo fastboot flash modem NON-HLOS.bin
+ 	sudo fastboot erase mdmddr
+ 	sudo fastboot flash fsg fsg.mbn
+ 	sudo fastboot erase mdm1m9kefs1
+ 	sudo fastboot erase mdm1m9kefs2
+ 	sudo fastboot flash bluetooth BTFM.bin
+ 	sudo fastboot flash dsp dspso.bin
+ 	sudo fastboot flash logo logo.bin
+ 	sudo fastboot flash boot boot.img
+ 	sudo fastboot flash vendor_boot vendor_boot.img
+ 	sudo fastboot flash dtbo dtbo.img
+	sudo fastboot flash super super.img_sparsechunk.0
+ 	sudo fastboot flash super super.img_sparsechunk.1
+ 	sudo fastboot flash super super.img_sparsechunk.2
+ 	sudo fastboot flash super super.img_sparsechunk.3
+ 	sudo fastboot flash super super.img_sparsechunk.4
+ 	sudo fastboot flash super super.img_sparsechunk.5
+ 	sudo fastboot flash super super.img_sparsechunk.6
+	sudo fastboot flash super super.img_sparsechunk.7
+ 	sudo fastboot flash super super.img_sparsechunk.8
+ 	sudo fastboot flash super super.img_sparsechunk.9
+ 	sudo fastboot flash super super.img_sparsechunk.10
+ 	sudo fastboot flash super super.img_sparsechunk.11
+ 	sudo fastboot flash super super.img_sparsechunk.12
+	sudo fastboot erase carrier
+ 	sudo fastboot erase ddr
+ 	sudo fastboot oem fb_mode_clear
+ 	sudo fastboot -w
 }
 
 f() {
